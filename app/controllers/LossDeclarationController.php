@@ -80,6 +80,9 @@ class LossDeclarationController
 
         $title = 'Détails de la déclaration de perte';
 
+        $loss = Loss::findOrFail($id);
+        $loss->load('pet');
+
         View::make('lossdeclaration.show', compact('title', 'loss'));
     }
 }
