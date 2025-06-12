@@ -34,13 +34,13 @@ Attention, quand le template affiche le nom de l'animal, les informations concer
 
 [Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/6)
 
-## Mission
+## Mission - 4
 
 Réalisez un middleware `OwnsLoss` qui vérifie si l'utilisateur connecté est propriétaire de la déclaration qu'il veut consulter. Appliquez ce middleware à la route qui permet de *voir* une déclaration de perte. 
 
 Pour l'instant, il est possible à dominique.vilain@hepl.be d'accéder à n'importe quelle déclaration de perte en mettant un id dans l'url. Il ne devrait pouvoir accéder qu'aux siennes. Si dominique.vilain@hepl.be tente d'accéder à la déclaration dont l'id est 2, la réponse doit lui dire qu'il n'en a pas l'autorisation.
 
-
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/8)
 
 ## Mission
 
