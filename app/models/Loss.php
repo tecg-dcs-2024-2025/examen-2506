@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Loss extends Model
 {
-    protected $fillable = ['lost_at', 'postal_code', 'country_id', 'pet_owner_id', 'pet_id', 'user_id'];
+    protected $fillable = ['lost_at', 'solved_at', 'postal_code', 'country_id', 'pet_owner_id', 'pet_id', 'user_id'];
 
     public function pet_owner(): BelongsTo
     {

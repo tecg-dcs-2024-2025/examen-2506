@@ -60,6 +60,8 @@ Capsule::schema()->dropIfExists('losses');
 Capsule::schema()->create('losses', function ($table) {
     $table->id();
     $table->timestamp('lost_at');
+    $table->timestamp('solved_at')
+        ->nullable();
     $table->smallInteger('postal_code');
     $table->foreignId('country_id')
         ->constrained();
