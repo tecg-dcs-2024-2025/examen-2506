@@ -1,6 +1,6 @@
 <?php
 
-use Animal\Middlewares\{Auth, Csrf, Guest, RequestRequiresId};
+use Animal\Middlewares\{Auth, Csrf, Guest, OwnsLoss, RequestRequiresId};
 
 return [
     [
@@ -17,55 +17,54 @@ return [
         'uri' => '/loss-declaration',
         'verb' => 'POST',
         'action' => [Animal\Controllers\LossDeclarationController::class, 'store'],
-        'middlewares' => [Csrf::class]
-
+        'middlewares' => [Csrf::class],
     ],
     [
         'uri' => '/loss-declaration',
         'verb' => 'GET',
         'action' => [Animal\Controllers\LossDeclarationController::class, 'index'],
-        'middlewares' => [Auth::class]
+        'middlewares' => [Auth::class],
     ],
     [
         'uri' => '/dashboard',
         'verb' => 'GET',
         'action' => [Animal\Controllers\LossdeclarationController::class, 'index'],
-        'middlewares' => [Auth::class]
+        'middlewares' => [Auth::class],
     ],
     [
         'uri' => '/loss-declaration/show',
         'verb' => 'GET',
         'action' => [Animal\Controllers\LossDeclarationController::class, 'show'],
-        'middlewares' => [Auth::class, RequestRequiresId::class]
+        'middlewares' => [Auth::class, RequestRequiresId::class, OwnsLoss::class],
     ],
     [
         'uri' => '/login',
         'verb' => 'GET',
         'action' => [Animal\Controllers\AuthenticatedSessionController::class, 'create'],
-        'middlewares' => [Guest::class]
+        'middlewares' => [Guest::class],
     ],
     [
         'uri' => '/login',
         'verb' => 'POST',
         'action' => [Animal\Controllers\AuthenticatedSessionController::class, 'store'],
-        'middlewares' => [Guest::class, Csrf::class]
+        'middlewares' => [Guest::class, Csrf::class],
     ],
     [
         'uri' => '/logout',
         'verb' => 'POST',
         'action' => [Animal\Controllers\AuthenticatedSessionController::class, 'destroy'],
-        'middlewares' => [Auth::class, Csrf::class]
+        'middlewares' => [Auth::class, Csrf::class],
     ],
     [
         'uri' => '/pet/edit',
         'verb' => 'GET',
         'action' => [Animal\Controllers\PetController::class, 'edit'],
-        'middlewares' => [Auth::class, RequestRequiresId::class]
+        'middlewares' => [Auth::class, RequestRequiresId::class],
     ],
     [
         'uri' => '/pet/edit',
         'verb' => 'POST',
         'action' => [Animal\Controllers\PetController::class, 'update'],
-        'middlewares' => [Auth::class, RequestRequiresId::class]
+        'middlewares' => [Auth::class, RequestRequiresId::class],
     ],
 ];
