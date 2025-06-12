@@ -32,7 +32,7 @@ Corrigez ce bug sans modifier le template.
 
 Attention, quand le template affiche le nom de l'animal, les informations concernant l'animal doivent déjà exister dans `$loss`. Vous devez *eager loader* l'animal dans `loss` au niveau du controlleur plutôt que tenter d'accéder à l'animal au dernier moment, quand vous êtes dans le template.
 
-[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/5)
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/6)
 
 ## Mission
 
