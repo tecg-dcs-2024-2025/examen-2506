@@ -6,15 +6,15 @@ N'oubliez pas de créer les dossiers /storage/cache et /storage/logs. Sans eux, 
 
 
 
-## Mission
+## Mission - 1
 
 La première mission est de corriger un bug qui s'est introduit lors du fonctionnement du seeder. Quand on exécute le seeder, des *losses* sont créées, certaines avec une référence à un utilisateur (toujours le même, dominique.vilain@hepl.be) et d'autres sans. Pourtant, dans la DB aucune déclaration n’est associée à un utilisateur. Le code du seeder est correct, ce n'est pas lui qui est en tort.
 
 Corrigez ce bug.
 
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/2)
 
-
-## Mission
+## Mission - 2
 
 Quand dominique.vilain@hepl.be se connecte, il est redirigé vers une page qui devrait lui affiche des déclarations. Pour le moment, cette page a un problème, une variable n’est pas définie. Corrigez ce problème mais faites attention à l'aspect suivant : le seeder a créé des déclarations dans la DB, dont certaines appartiennent à dominique.vilain@hepl.be et d’autres à personne. 
 
@@ -22,9 +22,9 @@ dominique.vilain@hepl.be ne peut voir ici que les déclarations qui lui appartie
 
 Corrigez ce bug en **définissant** et en **utilisant** la relation qui unit les pertes et les utilisateurs de l'application.
 
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/4)
 
-
-## Mission
+## Mission - 3
 
 Quand on a accès au résumé d'une déclaration, le template essaie d'accéder à une variable `loss` qui n’est pas présente et affiche des avertissements. 
 
@@ -32,7 +32,7 @@ Corrigez ce bug sans modifier le template.
 
 Attention, quand le template affiche le nom de l'animal, les informations concernant l'animal doivent déjà exister dans `$loss`. Vous devez *eager loader* l'animal dans `loss` au niveau du controlleur plutôt que tenter d'accéder à l'animal au dernier moment, quand vous êtes dans le template.
 
-
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/5)
 
 ## Mission
 
