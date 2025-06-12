@@ -161,12 +161,14 @@ Loss::create([
 
 
 for ($i = 1; $i < 10; $i++) {
+    $lost_at = $faker->dateTimeBetween('-10 months');
     Loss::create([
         'pet_id' => Pet::inRandomOrder()->first()->id,
         'pet_owner_id' => $dominique->id,
         'country_id' => Country::inRandomOrder()->first()->id,
         'postal_code' => random_int(1000, 9999),
-        'lost_at' => $faker->dateTimeBetween('-10 months'),
+        'lost_at' => $lost_at,
+        'solved_at' => random_int(0,1) ? $faker->dateTimeBetween($lost_at) : null,
         'user_id' => $dominique->id,
     ]);
 }
