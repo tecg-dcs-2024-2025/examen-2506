@@ -42,7 +42,7 @@ Pour l'instant, il est possible à dominique.vilain@hepl.be d'accéder à n'impo
 
 [Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/8)
 
-## Mission
+## Mission - 5
 
 Modifiez l’application pour qu'il soit possible de stocker dans la base de données une information à propos d’une déclaration concernant son statut *archivé*. Pour cela, un colonne `solved_at` serait utile. Quand elle est `NULL`, la déclaration n’est pas archivée et quand un timestamp s'y trouve, elle est *archivée*. 
 
@@ -54,7 +54,7 @@ Pour tester votre scope `active()`, modifiez le seeder où il y a déjà des dé
 
 Vérifiez donc votre scope lorsque dominique.vilain@hepl.be essaie de voir ses déclarations. Il ne devrait pas voir les archivées dans le template qui fait la liste des déclarations. 
 
-
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/10)
 
 ## Mission
 
