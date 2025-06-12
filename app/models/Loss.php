@@ -2,6 +2,8 @@
 
 namespace Animal\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -22,6 +24,12 @@ class Loss extends Model
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
+    }
+
+    #[Scope]
+    public function active(Builder $query)
+    {
+        return $query->whereNull('solved_at');
     }
 
     protected function casts(): array
