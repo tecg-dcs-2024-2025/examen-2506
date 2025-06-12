@@ -22,6 +22,8 @@ class LossDeclarationController
 
         $user = User::find($_SESSION['user']->id);
 
+        $losses = $user->losses;
+
         View::make('lossdeclaration.index', compact('title', 'losses'));
     }
 
