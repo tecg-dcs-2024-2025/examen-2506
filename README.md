@@ -56,7 +56,7 @@ Vérifiez donc votre scope lorsque dominique.vilain@hepl.be essaie de voir ses d
 
 [Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/10)
 
-## Mission
+## Mission - 6
 
 Pour le moment, le composant `layouts.navigation` contient deux parties, une avec le code destiné aux utilisateurs connectés et une avec le code destiné aux utilisateurs non connectés. 
 
@@ -67,3 +67,5 @@ Quand un utilisateur est connecté, il devrait voir trois liens (déclarations, 
 Vous vous assurerez que les trois liens fonctionnent en prévoyant les trois routes correspondantes et pour chacune un contrôleur qui retourne une vue annonçant simplement le titre de la vue (ce titre est défini dans le contrôleur qui affiche la vue).
 
 Le formulaire de déconnexion deviendra lui aussi un composant à part entière (`auth.logout`), et le lien profil récemment apparu dans l’application devra profiter également de votre création de composant pour les liens et être inséré en utilisant ce composant.
+
+[Solution](https://github.com/tecg-dcs-2024-2025/examen-2506/pull/12)

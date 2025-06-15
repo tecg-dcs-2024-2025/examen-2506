@@ -10,6 +10,11 @@ use Tecgdcs\View;
 
 class PetController
 {
+    public function index()
+    {
+        View::make('pet.index', ['title' => 'Animaux']);
+    }
+
     public function edit()
     {
         $id = (int) trim($_REQUEST['id']);

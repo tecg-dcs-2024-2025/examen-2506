@@ -1,14 +1,29 @@
+@php
+    $links = [
+        [
+            'label' => 'déclarations',
+            'url' => '/loss-declaration'
+        ],
+        [
+            'label' => 'animaux',
+            'url' => '/pet'
+        ],
+        [
+            'label' => 'propriétaires',
+            'url' => '/pet-owner'
+        ]
+];
+@endphp
 <div role="navigation">
     @auth
         <div class="profile">
-            <form action="/logout"
-                  method="post">
-                {!!  csrf_token()  !!}
-                @component('components.form.buttons.normal')
-                    Me déconnecter
-                @endcomponent
-            </form>
-            <a href="/profile">Profil</a>
+            @component('auth.logout')
+            @endcomponent
+            @component('components.link',['link'=>['url'=>'/profile']])
+                Profil
+            @endcomponent
+            @component('navigation.links',compact('links'))
+            @endcomponent
         </div>
     @endauth
 </div>

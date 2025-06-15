@@ -3,15 +3,18 @@
 namespace Animal\Controllers;
 
 use Animal\Models\Loss;
-use Tecgdcs\Response;
+use Animal\Models\User;
 use Tecgdcs\View;
 
 class DashboardController
 {
     public function index(): void
     {
-        $title = 'Les déclarations de perte';
-        $losses = Loss::all();
+        $title = 'Dashboard';
+
+        $user = User::find($_SESSION['user']->id);
+
+        $losses = $user->losses()->active()->get();
 
         View::make('lossdeclaration.index', compact('title', 'losses'));
     }
