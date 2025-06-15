@@ -56,6 +56,12 @@ return [
         'middlewares' => [Auth::class, Csrf::class],
     ],
     [
+        'uri' => '/pet',
+        'verb' => 'GET',
+        'action' => [Animal\Controllers\PetController::class, 'index'],
+        'middlewares' => [Auth::class],
+    ],
+    [
         'uri' => '/pet/edit',
         'verb' => 'GET',
         'action' => [Animal\Controllers\PetController::class, 'edit'],
@@ -66,5 +72,11 @@ return [
         'verb' => 'POST',
         'action' => [Animal\Controllers\PetController::class, 'update'],
         'middlewares' => [Auth::class, RequestRequiresId::class],
+    ],
+    [
+        'uri' => '/pet-owner',
+        'verb' => 'GET',
+        'action' => [Animal\Controllers\PetOwnerController::class, 'index'],
+        'middlewares' => [Auth::class],
     ],
 ];
